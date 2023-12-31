@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(rgb(250, 250, 250), rgb(180, 180, 180));
+    min-height: 90vh;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center; 
+}
+
+.outer-border {
+    margin: 30px;
+    border: 3px solid black;
+    border-radius: 12px;
+    box-shadow: 0px 0px 9px rgb(0, 0, 0, 0.4);
+}
+
+.inner-border {
+    border: 8px solid orange;
+    border-radius: 10px;
+}
+
+canvas {
+    display:block;
+    border: 3px solid black;
+}
+
+canvas:hover {
+    cursor: url('./paintbrush.cur'), auto;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 40px;
+    padding-right: 30px;
+}
+
+.current-color {
+    width: 62px;
+    height: 62px;
+    background: red;
+    border: 2px solid black;
+    margin: 16px;
+    perspective: 500px;
+    transition: transform 400ms ease-in-out;
+}
+
+.current-color.spin {
+    transform: rotateY(180deg);
+}
+
+.color-grid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 30px);
+    grid-template-rows: repeat(5, 30px);
+    grid-gap: 2px;
+    margin: 10px;
+}
+
+.color {
+    width: 30px;
+    height: 30px;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.color.red {
+    background: red;
+}
+.color.orange {
+    background: orange;
+}
+.color.yellow {
+    background: yellow;
+}
+.color.green {
+    background: green;
+}
+.color.blue {
+    background: blue;
+}
+.color.indigo {
+    background: indigo;
+}
+.color.violet {
+    background: violet;
+}
+.color.black {
+    background: black;
+}
+.color.white {
+    background: white;
+}
+.color.gray {
+    background: gray;
+}
+
+.color:active {
+    transform: scale(90%);
+}
+
+.size {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    font-family: Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.size-buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.button {
+    margin: 5px;
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+    background: white;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 3px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.eye-dropper {
+    position: relative;
+    transform: scale(120%);
+    bottom: 3px;
+    left: 33px;
+}
+
+.button:hover {
+    filter: brightness(90%);
+}
+
+.button:active {
+    transform: scale(90%);
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="icon" href="favicon.ico">
+    <script defer src="app.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="outer-border">
+            <div class="inner-border">
+                <canvas class="canvas">
+                </canvas>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="color-picker">
+                <div class="current-color front">
+                </div>
+                <div class="color-grid">
+                    <div class="color red">
+                    </div>
+                    <div class="color orange">
+                    </div>
+                    <div class="color yellow">
+                    </div>
+                    <div class="color green">
+                    </div>
+                    <div class="color blue">
+                    </div>
+                    <div class="color indigo">
+                    </div>
+                    <div class="color violet">
+                    </div>
+                    <div class="color gray">
+                    </div>
+                    <div class="color black">
+                    </div>
+                    <div class="color white">
+                    </div>
+                </div>
+            </div>
+
+            <div class="button eye-dropper">
+                <i class="fa fa-eyedropper" aria-hidden="true"></i>
+            </div>
+            
+            <div class="size">
+                <span class="value"></span>
+                <div class="size-buttons">
+                    <div class="button decrease-size">
+                        -
+                    </div>
+                    <div class="button increase-size">
+                        +
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+</body>
+
+</html>
